@@ -1,0 +1,8 @@
+nodemon looks for any changes that we make and automatically restarts the server
+
+just to start the server we can type: node server
+
+to enable nodemon:
+1. go to the package.json file and in scripts add start and server
+2. then in console type npm run server and it will run with nodemon as we have added the
+   start and the server in the scripts in package.json  
