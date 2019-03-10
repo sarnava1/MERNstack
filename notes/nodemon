@@ -6,3 +6,25 @@ to enable nodemon:
 1. go to the package.json file and in scripts add start and server
 2. then in console type npm run server and it will run with nodemon as we have added the
    start and the server in the scripts in package.json  
+
+
+you can do just "node server" to run the project 
+
+you can do just "npm start" to run the project 
+
+you can do just "npm run server" to run the project 
+
+BEGINNING OF A REACT APP
+
+1. install react in the local development machine( you can do it globally): sudo npm install -g create-react-app OR npm install create-react-app
+2. then you have to go the exact folder where our server.js is there. i was doing the dev-connector project during learning of the mern stack so I did: create--react-app client as that will make a client sub folder inside the main folder of the project so that we can house all our front end stuff there
+3. our main project runs on port 5000 while the create-react-app generally runs on port 3000
+4. we can run that separately using "npm start" after getting into the client folder
+5. we have to run the react app and the backend separately using the above procedure which is not a good idea so we have to install concurrently for running both of them together
+6. so we included these in the scripts 
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+so that we can do npm run client-install to install all the requirements of the client side, npm run client to run the client separately and npm run dev to run both the client side and the backend servers together.
+
+  
