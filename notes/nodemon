@@ -20,6 +20,8 @@ BEGINNING OF A REACT APP
 2. then you have to go the exact folder where our server.js is there. i was doing the dev-connector project during learning of the mern stack so I did: create--react-app client as that will make a client sub folder inside the main folder of the project so that we can house all our front end stuff there
 3. our main project runs on port 5000 while the create-react-app generally runs on port 3000
 4. we can run that separately using "npm start" after getting into the client folder
+**in the package.json file of the client folder we have to include the proxy of the backend, that is,
+ http://localhost:5000 **
 5. we have to run the react app and the backend separately using the above procedure which is not a good idea so we have to install concurrently for running both of them together
 6. so we included these in the scripts 
     "client-install": "npm install --prefix client",
