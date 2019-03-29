@@ -1,5 +1,6 @@
 import {
     GET_PROFILE,
+    GET_PROFILES,
     PROFILE_LOADING,
     CLEAR_CURRENT_PROFILE
   } from '../actions/types';
@@ -16,6 +17,12 @@ import {
         return {
           ...state,
           loading: true
+        };
+      case GET_PROFILES:
+        return {
+          ...state,
+          profiles: action.payload,
+          loading: false
         };
       case GET_PROFILE:
         return {

@@ -9,6 +9,7 @@ import Experience from './Experience';
 import Education from './Education';
 
 class Dashboard extends Component {
+  
   componentDidMount() {
     this.props.getCurrentProfile();
   }
@@ -22,7 +23,7 @@ class Dashboard extends Component {
     const { profile, loading } = this.props.profile;
 
     let dashboardContent;
-
+    
     if (profile === null || loading) {
       dashboardContent = <Spinner />;
     } else {
