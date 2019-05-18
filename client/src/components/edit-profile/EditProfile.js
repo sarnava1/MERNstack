@@ -8,7 +8,7 @@ import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
  class CreateProfile extends Component {
   constructor(props) {
