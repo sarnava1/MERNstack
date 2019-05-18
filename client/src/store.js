@@ -1,20 +1,24 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+//this is the redux store
+
+//importing the dependancies
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/logOnly';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
+//the middleware for the store
+const middleware= [thunk];
+
+//the initial state
 const initialState = {};
 
-const middleware = [thunk];
-
-//first parameter is the root reducer, the second para is for the inital state 
-//and the 3rd parameter is for the middleware
+//creating the store
 const store = createStore(
-    rootReducer,
-    initialState,
-    compose(
-        applyMiddleware(...middleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )    
+     rootReducer,
+     initialState,
+     composeWithDevTools(applyMiddleware(...middleware))
 );
+     
 
+//exporting the store
 export default store;
